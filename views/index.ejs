@@ -22,7 +22,7 @@
                         <div class="temp"></div>
                         <div class="desc"></div>
                     </div>
-                    <h3>Thursday</h3>
+                    <h2>Thursday</h2>
                 </header>
                 <section class="content">
                     <ul>
@@ -68,8 +68,12 @@
                                 _fn('.header-content .city').innerHTML=_d.location;
                                 _fn('.header-content .temp').innerHTML= _d.current.temp+`<sup>&deg;</sup><img width='50' src='http://openweathermap.org/img/wn/${_d.current.weather[0].icon}@2x.png'></img>`;
                                 _fn('.header-content .desc').innerHTML= _d.current.weather[0].description;
+                                const currentDay =new Date(parseInt(_d.current.dt)*1000).toString().split(' ')[0];
+                                _fn('header.container h2').innerHTML=currentDay;
 
                                 /******Forecast Temperature List*******/
+                                
+                                console.log(currentDay);
                                 const dateArr = _d.daily.slice(1);
                                 const ul = _fn('section.content ul');
                                 ul.innerHTML ="";

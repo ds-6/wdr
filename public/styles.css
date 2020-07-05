@@ -61,7 +61,7 @@ body{
 .inner-wrapper header .temp sup{
     font-size: 14px;
 }
-header.container h3{
+header.container h2{
     padding-bottom: 0;
     margin-bottom: 0;
     position: relative;
@@ -70,13 +70,13 @@ header.container h3{
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
 }
-header.container h3:after{
+header.container h2:after{
     content: "";
     height: 4px;
     width:70px;
     background: #0d5286;
     position:absolute;
-    top:16px;
+    top:20px;
     left: -15px;
 }
 section.content{
