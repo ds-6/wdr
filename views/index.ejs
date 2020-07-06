@@ -5,7 +5,6 @@
         <title>Get Current Weather</title>
         <meta name="description" content="Get the current weather">
         <meta name="viewport" content= "width=device-width, user-scalable=no">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -50,7 +49,7 @@
                 
                 _fn('.btn-weather').addEventListener('click',getLoc);
                 function getLoc(){
-                    _fn('.btn-container').innerHTML="<h1>Loading...</h1>";
+                    _fn('.btn-container').innerHTML="<h1 style='margin:20px'>Loading...</h1>";
                     if(navigator.geolocation){
                         navigator.geolocation.getCurrentPosition(pos=>{
                             let lat = pos.coords.latitude.toFixed(2);
@@ -63,30 +62,33 @@
                             .then(data=>{
                                 _fn('.btn-container').style.display='none';
                                 const _d= data.newData;
-                                console.log(_d);
-                                _fn('.outer-wrapper').style.display='block';
+                                console.log(_d);                              
                                 _fn('.header-content .city').innerHTML=_d.location;
                                 _fn('.header-content .temp').innerHTML= _d.current.temp+`<sup>&deg;</sup><img width='50' src='http://openweathermap.org/img/wn/${_d.current.weather[0].icon}@2x.png'></img>`;
                                 _fn('.header-content .desc').innerHTML= _d.current.weather[0].description;
-                                const currentDay =new Date(parseInt(_d.current.dt)*1000).toString().split(' ')[0];
-                                _fn('header.container h2').innerHTML=currentDay;
+                                const currentDay =new Date(parseInt(_d.current.dt)*1000).toString().split(' ');
+                                const cDay = currentDay[0];
+                                const cMonth = currentDay[1];
+                                const cDate = currentDay[2];
+                                _fn('header.container h2').innerHTML=`${cDay},${cMonth} ${cDate}`;
+                                _fn('.outer-wrapper').style.display='block';
 
                                 /******Forecast Temperature List*******/
                                 
-                                console.log(currentDay);
-                                const dateArr = _d.daily.slice(1);
+                            
+                                const dataArr = _d.daily;
                                 const ul = _fn('section.content ul');
                                 ul.innerHTML ="";
-                                dateArr.forEach(e=>{
+                                dataArr.forEach(e=>{
                                     const newArr = new Date(parseInt(e.dt)*1000).toString().split(' ')
                                     const day = newArr[0];
-                                    const month= newArr[1];
-                                    const date= newArr[2];
+                                    //const month= newArr[1];
+                                    //const date= newArr[2];
                                     const weatherDesc = e.weather[0].description;
                                     const icon = e.weather[0].icon;
 
                                     ul.innerHTML +=`<li>
-                                                        <div class="day">${day}, ${month} ${date}</div>
+                                                        <div class="day">${day}</div>
                                                         <div class="detail"><img width='40' src='http://openweathermap.org/img/wn/${icon}@2x.png'></img>${weatherDesc}</div>
                                                     </li>`
                                 })

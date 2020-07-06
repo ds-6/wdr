@@ -40,14 +40,14 @@ body{
     padding:15px;
 }
 .inner-wrapper header{
-    background:#0d4a6f url('/weather.png') no-repeat ;
+    background:#0d4a6f url(/weather.png) no-repeat;
     background-size: cover;
     min-height:250px;
-    color:#f3f3f3;
+    color:#eee;
     padding-top:30px;
 }
 .inner-wrapper header div{
-    width:120px;
+    width:180px;
     margin-bottom:20px;
     text-align: center;
     margin:0 auto;
@@ -66,17 +66,18 @@ header.container h2{
     margin-bottom: 0;
     position: relative;
     top:5px;
-    color:#0d5286;
+    color:#12503c;
     text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: -.7px;
+    font-style: italic;
 }
 header.container h2:after{
     content: "";
-    height: 4px;
+    height: 5px;
     width:70px;
-    background: #0d5286;
+    background: #12503c;
     position:absolute;
-    top:20px;
+    top:25px;
     left: -15px;
 }
 section.content{
@@ -110,6 +111,9 @@ section.content ul li{
     overflow: hidden;
     line-height: 60px;
     padding: 0 20px;
+}
+section.content ul li:first-child{
+    border-left: 4px solid #20b282;
 }
 section.content ul li .day{
     float:left;
