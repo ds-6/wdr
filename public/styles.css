@@ -40,7 +40,7 @@ body{
     padding:15px;
 }
 .inner-wrapper header{
-    background:#0d4a6f url(/weather.png) no-repeat;
+    background:#20b282 url(/weather.png) no-repeat;
     background-size: cover;
     min-height:250px;
     color:#eee;
@@ -118,7 +118,7 @@ section.content ul li:first-child{
 section.content ul li .day{
     float:left;
     width:50%;
-    font-size:16px;
+    font-size:18px;
 }
 section.content ul li .detail{
     width:50%;
