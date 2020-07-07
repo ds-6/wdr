@@ -60,6 +60,7 @@ function getLoc(){
                 });
                 $('.temp-slider').slick({
                     infinite: false,
+                    arrows:false,
                     slidesToShow: 5,
                     slidesToScroll: 5
                 });
