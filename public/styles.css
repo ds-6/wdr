@@ -7,27 +7,6 @@ body{
     background:#f3f3f3;
     font-family: Arial, Helvetica, sans-serif;
 }
-/******Landing Page*****/
-.btn-weather{
-    outline:none;
-    border:none;
-    height: 60px;
-    width: 150px;
-    cursor:pointer;
-    font-size: 22px;
-    box-shadow:0 0 4px rgba(0,0,0,.3);
-    display: inline-block;
-    margin:50% 50%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-    background-color:crimson;
-    color:#f3f3f3;
-    border-radius:30px;
-}
-
-/******Index Page*****/
-
-
 .outer-wrapper{
     width:100%;
 }
@@ -80,6 +59,27 @@ header.container h2:after{
     top:25px;
     left: -15px;
 }
+/*********Slider**********/
+    .temp-slider{
+        height:95px;
+        padding:2px;
+    }
+  	.div-inner{        
+        width:50px;
+        height:90px;
+        margin-right:12px;
+        font-size:12px;
+        color:#777;
+    }
+    .div-inner .mini-div{
+    	width:40px;
+        height:30px;
+        line-height:30px;
+        margin:0 auto;
+        text-align: left;
+    }
+
+
 section.content{
     min-height:400px;
     background:#fff;

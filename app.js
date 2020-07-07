@@ -35,7 +35,7 @@ app.post('/weather',(req,res)=>{
             loc = cityData.results[0].formatted;
 
             /***** Fetching weather******/
-            const uri = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude={hourly}&appid=${key}`;
+            const uri = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${key}`;
             fetch(uri,{
                 method:'GET'
             })
