@@ -1,6 +1,5 @@
-
-
 /********Gobal Function***********/
+
 function _fn(id){
     return document.querySelector(id);
 }
@@ -55,7 +54,7 @@ function getLoc(){
                 function getAQI (){
                     const aqiURL = `https://api.openaq.org/v1/measurements?coordinates=${lat},${long}&radius=5000&parameter=pm10&order_by=local&limit=1`
                     fetch(aqiURL,{
-                        method:'GET'
+                        method:'GET',
                     })
                     .then(res=>res.json())
                     .then(aqiData=>{
@@ -110,7 +109,9 @@ function getLoc(){
                                     </li>`
                 })
             })
-            .catch(err=>console.log(err))
+            .catch(err=>{
+                _fn('header.container h2').innerHTML = "OOPS! Server Error, Try again."
+            })
         })
     }
 }  
