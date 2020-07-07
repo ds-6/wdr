@@ -48,7 +48,7 @@ function getLoc(){
                 _fn('.outer-wrapper').style.display ="block";
 
                 /******Slider Temperature List*******/
-                const hourlyArr = _d.hourly.slice(0,12);
+                const hourlyArr = _d.hourly.slice(1,13);
                 _fn('.temp-slider').innerHTML = "";
                 hourlyArr.forEach((e)=>{
                     const w_icon = e.weather[0].icon;
