@@ -52,20 +52,21 @@ function getLoc(){
 
                 _fn('.aqi-btn').addEventListener('click',getAQI);
                 function getAQI (){
-                    const aqiURL = `https://api.openaq.org/v1/measurements?coordinates=${lat},${long}&radius=5000&parameter=pm10&order_by=local&limit=1`
+                    const aqiURL = `https://api.openaq.org/v1/measurements?coordinates=${29.10},${75.16}&radius=5000&parameter=pm10&order_by=local&limit=1`
                     fetch(aqiURL,{
                         method:'GET',
                     })
                     .then(res=>res.json())
-                    .then(aqiData=>{
+                    .then(aqiData=>{                        
                         const aqi= aqiData.results[0];
                         console.log(aqi);
                         _fn('.aqi-loc').innerText=aqi.location;
                         _fn('.aqi-val').innerHTML = `${aqi.value.toFixed()} <span>AQI</span><sup>pm10</sup>`;
                         _fn('.aqi-time').innerHTML = `updated at ${aqi.date.local.slice(11,16)}`;
-                        _fn('.aqi-data').classList.add('show');
+                        _fn('.aqi-data').classList.add('show');                        
                     })
                     .catch(err=>{
+                        _fn('.aqi-data').classList.add('show');
                         _fn('.aqi-loc').innerHTML = "OOPS! No official data found for your location."
                     })
                     
