@@ -52,7 +52,7 @@ function getLoc(){
 
                 _fn('.aqi-btn').addEventListener('click',getAQI);
                 function getAQI (){
-                    const aqiURL = `https://api.openaq.org/v1/measurements?coordinates=${29.10},${75.16}&radius=5000&parameter=pm10&order_by=local&limit=1`
+                    const aqiURL = `https://api.openaq.org/v1/measurements?coordinates=${lat},${long}&radius=5000&parameter=pm10&order_by=local&limit=1`
                     fetch(aqiURL,{
                         method:'GET',
                     })
