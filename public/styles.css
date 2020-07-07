@@ -6,6 +6,7 @@ body{
     padding:0;
     background:#f3f3f3;
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 .outer-wrapper{
     width:100%;
@@ -25,6 +26,7 @@ body{
     min-height:260px;
     color:#e4e4e4;
     padding-top:30px;
+    position: relative;
 }
 .inner-wrapper header div{
     width:180px;
@@ -46,7 +48,7 @@ header.container h2{
     margin-bottom: 0;
     position: relative;
     top:8px;
-    color:#0c1779e7;
+    color:#cd661d;
     text-transform: uppercase;
     letter-spacing: -.8px;
 }
@@ -54,11 +56,87 @@ header.container h2:after{
     content: "";
     height: 5px;
     width:70px;
-    background: #0c1779e7;
+    background: #cd661d;
     position:absolute;
     top:25px;
     left: -15px;
 }
+/********AQI CSS***********/
+.aqi-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    outline: none;
+    border: none;
+    padding: 4px 8px;
+    background: #cd661d;
+    color: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0 0 3px rgba(0,0,0,.4);
+    cursor: pointer;
+}
+.aqi-data{
+    width:200px;
+    height:250px;
+    padding:20px;
+    position: absolute;
+    background: #f6f6f6;
+    top:-400px;
+    left:50%;
+    transform: translateX(-50%);
+    border-radius:5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    z-index: 9999;
+    display: none;
+}
+.aqi-data.show{
+    display: block;
+    animation: move 1s forwards;
+}
+.aqi-data .fa-times{
+    position: absolute;
+    height:25px;
+    width:25px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow:0 0 5px rgba(0,0,0,.4);
+    background: crimson;
+    color:#f3f3f3;
+    top:15px;
+    right:15px;
+    cursor:pointer;
+}
+.aqi-data div{
+    width:150px;
+    margin:0 auto;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.aqi-data div.aqi-loc{
+    font-size: 13px;
+    text-overflow: ellipsis;
+    height: auto;
+    border-left: 4px solid #cd661d;
+}
+.aqi-val span{
+    font-size: 30px;
+    font-weight: bold;
+}
+.aqi-val sup{
+    position: relative;
+    top:-12px;
+    font-size: 11px;
+}
+.aqi-data div.aqi-time{
+    line-height: 30px;
+    font-size: 11px;
+    text-align: right;
+}
+
+
 /*********Slider**********/
     .temp-slider{
         height:92px;
@@ -123,4 +201,16 @@ section.content ul li .detail{
     white-space: pre;
     text-transform: capitalize;
     font-size: 12px;
+}
+
+@keyframes move {
+    0% {
+        top:-400px
+    }
+    75%{
+        top:30%;
+    }
+    100%{
+        top:15%;
+    }
 }

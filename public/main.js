@@ -1,3 +1,5 @@
+
+
 /********Gobal Function***********/
 function _fn(id){
     return document.querySelector(id);
@@ -46,6 +48,34 @@ function getLoc(){
                 _fn('header.container h2').innerHTML=`${dateFinder(_d.current.dt).day},${dateFinder(_d.current.dt).month} ${dateFinder(_d.current.dt).date}`;
                _fn('.loading').style.display="none";
                 _fn('.outer-wrapper').style.display ="block";
+
+                /******AQI BTN*******/
+
+                _fn('.aqi-btn').addEventListener('click',getAQI);
+                function getAQI (){
+                    const aqiURL = `https://api.openaq.org/v1/measurements?coordinates=${lat},${long}&radius=5000&parameter=pm10&order_by=local&limit=1`
+                    fetch(aqiURL,{
+                        method:'GET'
+                    })
+                    .then(res=>res.json())
+                    .then(aqiData=>{
+                        const aqi= aqiData.results[0];
+                        console.log(aqi);
+                        _fn('.aqi-loc').innerText=aqi.location;
+                        _fn('.aqi-val').innerHTML = `${aqi.value.toFixed()} <span>AQI</span><sup>pm10</sup>`;
+                        _fn('.aqi-time').innerHTML = `updated at ${aqi.date.local.slice(11,16)}`;
+                        _fn('.aqi-data').classList.add('show');
+                    })
+                    .catch(err=>{
+                        _fn('.aqi-loc').innerHTML = "OOPS! No official data found for your location."
+                    })
+                    
+                }
+
+                /******* remove .show class on aqiBTN**********/
+                _fn('.fa-times').addEventListener("click",(e)=>{
+                    _fn('.aqi-data').classList.remove('show');
+                })
 
                 /******Slider Temperature List*******/
                 const hourlyArr = _d.hourly.slice(1,16);

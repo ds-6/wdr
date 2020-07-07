@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <h2 class='loading' style='margin:30px'>Loading...</h2>
@@ -21,6 +22,7 @@
                         <div class="desc"></div>
                     </div>
                     <h2>Thursday</h2>
+                    <button class="aqi-btn">GET AQI</button>
                 </header>
                 
                 <section class="slider-wrapper">
@@ -37,8 +39,14 @@
                     </ul>
                 </section>
             </div>
+            
         </div>
-        
+        <div class="aqi-data">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <div class="aqi-loc"></div>
+            <div class="aqi-val"></div>
+            <div class="aqi-time"></div>
+        </div>
         <script src="main.js"></script>             
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
