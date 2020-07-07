@@ -23,7 +23,7 @@ body{
     background-size: cover;
     background-size: center;
     min-height:250px;
-    color:#eee;
+    color:#e4e4e4;
     padding-top:30px;
 }
 .inner-wrapper header div{
@@ -41,7 +41,7 @@ body{
 .inner-wrapper header .temp sup{
     font-size: 14px;
 }
-header.container h3{
+header.container h2{
     padding-bottom: 0;
     margin-bottom: 0;
     position: relative;
@@ -50,13 +50,13 @@ header.container h3{
     text-transform: uppercase;
     letter-spacing: -.8px;
 }
-header.container h3:after{
+header.container h2:after{
     content: "";
     height: 5px;
     width:70px;
     background: #0c1779e7;
     position:absolute;
-    top:20px;
+    top:25px;
     left: -15px;
 }
 /*********Slider**********/
