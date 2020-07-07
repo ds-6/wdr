@@ -19,10 +19,10 @@ body{
     padding:15px;
 }
 .inner-wrapper header{
-    background:#12573a url(/weather.png) no-repeat;
+    background:#3108a0 url(/weather.png) no-repeat;
     background-size: cover;
     background-size: center;
-    min-height:250px;
+    min-height:260px;
     color:#e4e4e4;
     padding-top:30px;
 }
