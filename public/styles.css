@@ -61,8 +61,7 @@ header.container h2:after{
 }
 /*********Slider**********/
     .temp-slider{
-        height:95px;
-        padding:2px;
+        height:92px;
     }
   	.div-inner{        
         width:50px;
@@ -111,9 +110,6 @@ section.content ul li{
     overflow: hidden;
     line-height: 60px;
     padding: 0 20px;
-}
-section.content ul li:first-child{
-    border-left: 4px solid #20b282;
 }
 section.content ul li .day{
     float:left;
