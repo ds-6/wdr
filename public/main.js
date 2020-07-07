@@ -43,7 +43,7 @@ function getLoc(){
                 _fn('.header-content .city').innerHTML=_d.location;
                 _fn('.header-content .temp').innerHTML= _d.current.temp.toFixed()+`<sup>&deg;</sup><img width='35' src=${img(_d.current.weather[0].icon)}></img>`;
                 _fn('.header-content .desc').innerHTML= _d.current.weather[0].description;
-                _fn('header.container h2').innerHTML=`${dateFinder(_d.current.dt).day},${dateFinder(_d.current.dt).month} ${dateFinder(_d.current.dt).date}`;
+                _fn('header.container h3').innerHTML=`${dateFinder(_d.current.dt).day},${dateFinder(_d.current.dt).month} ${dateFinder(_d.current.dt).date}`;
                _fn('.loading').style.display="none";
                 _fn('.outer-wrapper').style.display ="block";
 
