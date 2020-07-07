@@ -49,7 +49,6 @@ header.container h3{
     color:#0c1779e7;
     text-transform: uppercase;
     letter-spacing: -.8px;
-    font-style:;
 }
 header.container h3:after{
     content: "";
