@@ -76,9 +76,9 @@ header.container h2:after{
     cursor: pointer;
 }
 .aqi-data{
-    width:200px;
+    width:250px;
     height:250px;
-    padding:20px;
+    padding:50px 20px 20px 20px ;
     position: absolute;
     background: #f6f6f6;
     top:-400px;
