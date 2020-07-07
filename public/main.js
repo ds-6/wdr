@@ -48,11 +48,10 @@ function getLoc(){
                 _fn('.outer-wrapper').style.display ="block";
 
                 /******Slider Temperature List*******/
-                const hourlyArr = _d.hourly.slice(1,13);
+                const hourlyArr = _d.hourly.slice(1,16);
                 _fn('.temp-slider').innerHTML = "";
                 hourlyArr.forEach((e)=>{
                     const w_icon = e.weather[0].icon;
-                    console.log(`${e.weather[0].description}/n`);
                     _fn('.temp-slider').innerHTML +=`<div class="div-inner">
                                                         <div class="mini-div">${dateFinder(e.dt).time.slice(0,5)}</div>
                                                         <div class="mini-div"><img width='30' src=${img(w_icon)}></img></div>                                                        
@@ -61,8 +60,8 @@ function getLoc(){
                 });
                 $('.temp-slider').slick({
                     infinite: false,
-                    slidesToShow: 4,
-                    slidesToScroll: 4
+                    slidesToShow: 5,
+                    slidesToScroll: 5
                 });
 
 
@@ -76,7 +75,7 @@ function getLoc(){
                     const icon = e.weather[0].icon;
                     ul.innerHTML +=`<li>
                                         <div class="day">${dateFinder(e.dt).day}</div>
-                                        <div class="detail"><img width='35' src=${img(icon)}></img>${weatherDesc}</div>
+                                        <div class="detail"><img width='30' src=${img(icon)}></img>${weatherDesc}</div>
                                     </li>`
                 })
             })
