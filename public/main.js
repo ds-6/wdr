@@ -95,6 +95,14 @@ function getLoc(){
                     slidesToScroll: 5
                 });
 
+                const colors =['#dc143c','#cd6839','#a7c44c','#5ac18e','#6897bb',];
+                const slides = document.querySelectorAll('.slick-slide');
+                var n = 0;
+                Array.from(slides).forEach(e=>{
+                    if(n==5){n=0};
+                    e.style.background = colors[n];
+                    n++;
+                })
 
                 /******Forecast Temperature List*******/               
             
