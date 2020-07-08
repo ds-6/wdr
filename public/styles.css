@@ -142,24 +142,28 @@ header.container h2:after{
 
 /*********Slider**********/
     .slider-wrapper{
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
     .temp-slider{
-        height:92px;
+        height:81px;
     }
   	.div-inner{        
         width:50px;
-        height:90px;
-        margin-right:12px;
+        height:75px;
         font-size:12px;
         color:#f4f4f4;
     }
     .div-inner .mini-div{
     	width:40px;
-        height:30px;
-        line-height:30px;
+        height:25px;
+        line-height:25px;
         margin:0 auto;
-        text-align: left;
+        text-align: center;
+    }
+    .div-inner .mini-div:nth-child(2){
+        position: relative;
+        top:-4px;
+        left:4px;
     }
 /*******Slick slides' offical class********/
 .slick-slide{
