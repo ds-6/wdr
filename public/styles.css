@@ -48,7 +48,7 @@ header.container h2{
     margin-bottom: 0;
     position: relative;
     top:8px;
-    color:#dc143c;
+    color:#302d85;
     text-transform: uppercase;
     letter-spacing: -.8px;
 }
@@ -56,7 +56,7 @@ header.container h2:after{
     content: "";
     height: 5px;
     width:70px;
-    background: #dc143c;
+    background: #302d85;
     position:absolute;
     top:25px;
     left: -15px;
@@ -141,6 +141,9 @@ header.container h2:after{
 
 
 /*********Slider**********/
+    .slider-wrapper{
+        margin-bottom: 5px;
+    }
     .temp-slider{
         height:92px;
     }
@@ -158,7 +161,7 @@ header.container h2:after{
         margin:0 auto;
         text-align: left;
     }
-/*******Slick slides' class********/
+/*******Slick slides' offical class********/
 .slick-slide{
     box-shadow: 0 0 4px rgba(0,0,0,.3);
     margin: 3px;
